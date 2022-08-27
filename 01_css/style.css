@@ -1,3 +1,20 @@
+h1 {
+    background-color: aqua;
+    border: solid 1px black;
+    padding: 10px;
+}
+
 span {
     background-color: brown;
+
 }
+
+
+/* abbiamo 4 tipi di selettore : 
+1) elemento come span 
+2) classe : quello con il punto davanti come ad esempio .container  
+3) id : quello con # , esempio #idtest
+
+*/
+
+/* una regola e composta dalla propieta , e dal valore  */
