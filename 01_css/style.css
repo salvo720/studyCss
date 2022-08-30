@@ -18,3 +18,186 @@ span {
 */
 
 /* una regola e composta dalla propieta , e dal valore  */
+
+/* CSS : css e l'acronimo di cascading style sheet , ovvero i fogli di stile a cascata  , */
+
+/* cascata :  il css viene parsato ovvero letto e poi applicato  , quindi se mettiamo la stessa propieta due volte con colori diversi quella
+ posizionata per ultima sara quella applicata , come nell'esempio */
+
+h3 {
+    background-color: blue;
+}
+
+h3 {
+    background-color: red;
+}
+
+
+
+
+/* ereditarieta : gli elemnti poso ereditare le regole css dall'elemento padre 
+ci sono 3 tipi di eriditarieta o inheritence :
+1) inherit : prendi l'attributo dall'elemento padre 
+2) initial , per prendere il valore iniziale che e quello di default 
+3) unset : sistema la propieta con il comportamento naturale dell'elemento , cioe la propieta e impostata su inherit , ovvero vienen ereditata se e possibile ,
+altrimenti la propieta sara impsotata su initial 
+4) revert : reimposta una propieta allo stile predefinito del browser invece dei valori predefiniti della propieta , in molti casi funziona come unset 
+*/
+
+/* tabella priorita e punteggio selettori css, sotto undestanding the cascade  : 
+link ( https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance ) */
+
+/* tabella per grandi linee : 
+css selettore : 1 punto 
+css classe : 10 punti 
+css id : 100 punti 
+css inline : 1000 punti 
+
+una regola fomata da piu classi e piu selettori aumenta il punteggio della regola  ad esempio la regola : 
+li > a[href*="en-US"] > .inline-warning ,  vale 22 punti  */
+
+/* !important : il not important annula in conteggio dei punti css e rende la tua rega piu importante delle altre , quindi non sara
+ sovrascritta ma andra a sovrascrivere le altre regole  */
+
+/* che cose un selettore : il selettore e un elemento che ci permette di selezionare quella classe o entita dal DOM   */
+
+/* lista di selettori : selettori separati da , ma che applicano la stessa regola esempio :  */
+
+p,
+h1,
+.hightlight {
+    color: blue;
+}
+
+/* selettori di tipo o di elementi esempio : */
+
+strong {
+    background-color: salmon;
+}
+
+h2 {
+    background-color: rebeccapurple;
+}
+
+h4 {
+    background-color: greenyellow;
+}
+
+/* selettori universale  esempio : */
+
+/* * {
+    font-size: 20px;
+} */
+
+/* selettori di classe , esempio :  */
+
+.warning {
+    border: solid 1px red;
+}
+
+/* selettore di classe concatenati  */
+
+.prova.warning {
+    border: solid 5px red;
+}
+
+/* selettore di id , esempio : */
+
+/* RULES : 
+1) gli id devono essere univoci e fare riferimento ad un singolo elemento  */
+
+/* #univoco {
+    background-color: coral;
+} */
+
+/* selettori di attributo
+i selettori di attributi saranno attivi solo se l'lemento in questo caso a , hanno quell'attributo 
+, esempio :  */
+
+a[title] {
+    background-color: cornflowerblue;
+}
+
+a[href="contatti.html"] {
+    background-color: crimson;
+}
+
+/* ~ = tilde indica che la classe deve essere esatta , ad esempio special o special insieme ad altre classi , non deve essere contenuto nella parola  , non sara valido */
+a[class~="special"] {
+    background-color: darkblue;
+}
+
+/* ^=094 codice asci , equivalale ad inizia con  */
+a[class^="box-x"] {
+    background-color: cornflowerblue;
+}
+
+/* $ = se finisce con  */
+a[class$="box-x"] {
+    background-color: red;
+}
+
+/* deve avere box al suo interno */
+a[class*="box-x"] {
+    background-color: greenyellow;
+}
+
+/* Pseudo classi (stati)  = 
+sono dei selettori che selezionano gli stati di un elemento come ad esempio a:hover , esempio  */
+
+.test:hover {
+    /* a:hover */
+    color: hotpink;
+}
+
+/* Pseudo elementi = sono degli elementi che noi non abbiamo generato ma che possiamo generare dopo , ad esempio con ::before ,
+ oppure sono elementi che vengono intesi da css ma che noi non abbiamo messo , cioe facciamo rifermiento a degli elementi css ad esempio p::first-line , esempio :   */
+
+p::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* detnro un elemento html possiamo inserire i contenuti ::after e ::before , di cui l'attributo fondamnetale per essere visualizzato e il content esempio :   */
+/* quindi ::after e ::before esistono grazie all'attributo content , infatti se lo rimuoviamo non saranno presenti nel contenuto dell'elemento  */
+.box:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+}
+
+.box:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+}
+
+/* combinatori : descendant , child , siblings  */
+/* TUTTI I DISCENDTI DELLA CASSE BOX (descendant) : prende tutti i p di classe box e li fa diventare purple  */
+.box2 p {
+    color: rgb(78, 2, 62);
+}
+
+/* CHILD : i child sono indicati da > , quindi qui andiamo a selezionare tutti i p child di box3 */
+.box3>p {
+    color: darkblue;
+}
+
+/* SIBLINGS : prendere il primo elemento p fratello di h1  */
+
+h1+p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+
+h1~p {
+    background-color: red;
+}
