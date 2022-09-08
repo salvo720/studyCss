@@ -1,0 +1,25 @@
+.box {
+    border: solid 1px red;
+    height: 200px;
+    width: 200px;
+}
+
+.bg-color {
+    background-color: salmon;
+}
+
+.bg-image {
+    background-image: url(start.png);
+    background-size: contain;
+}
+
+.bg-gradient {
+    border: linear-gradient(115deg, rgba(0, 249, 255, 1) 39%, rgba(51.56, 57, 1) 96%);
+}
+
+.bg-attack {
+    background-image: url(https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg);
+    height: 3000px;
+    background-attachment: scroll;
+    background-size: contain;
+}
