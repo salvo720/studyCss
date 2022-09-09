@@ -9,17 +9,57 @@
 }
 
 .bg-image {
-    background-image: url(start.png);
+    background-image: url(image/star.png);
     background-size: contain;
+}
+
+.bg-image2 {
+    background-image: url(image/star.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
 
 .bg-gradient {
     border: linear-gradient(115deg, rgba(0, 249, 255, 1) 39%, rgba(51.56, 57, 1) 96%);
 }
 
-.bg-attack {
+/* il graidient e la sfumatura del colore  */
+
+.bg-attach {
     background-image: url(https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg);
     height: 3000px;
     background-attachment: scroll;
     background-size: contain;
 }
+
+.box2 {
+    height: 200px;
+    width: 200px;
+    border: solid 10px red;
+}
+
+.ripasso-bordi {
+    border-radius: 50px;
+}
+
+.cerchio {
+    border-radius: 50%;
+}
+
+.ripasso-bordi.bg-attach {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.box2.cerchio.bg-attach {
+    border: unset;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* backgorund-attachment : scroll = ci da la possibilita di aggiungere un immagine in background e scenderla quando scrolliamo  */
