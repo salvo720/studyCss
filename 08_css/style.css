@@ -1,0 +1,66 @@
+/* i pixel sono delle unita di misura assoluti , per dare piu elasticita al nostro template usiamo quelle relative  */
+
+/* 
+assolute :
+1) px
+2)
+3)
+4)
+5)
+6)
+relative :
+1) em : prende la font-size del parente e la moltiplica per il valore che mettiamo esempio : Esempio em 
+2) ex
+3) ch
+4) rem
+5) lh
+6) vw 
+7) vh 
+8) vmin 
+9) vmax 
+
+em , rem : prendono la font-size dal parent 
+vw , vh : predono l'1 % dell'altezza o larghezza del viewport (pagina )
+
+*/
+
+/* Esempio em  */
+/* quindi la font-size sara : 10 x 10 = 100 , gli elemnti tra body e p , non avendo specificato una font size la ereditano da body  */
+
+
+/* body {
+    font-size: 10px;
+} */
+
+
+/* p {
+    font-size: 10em;
+} */
+
+/* ------------------------------------------------------------------------------------------------------- */
+/* esempio rem  */
+
+/* div {
+    font-size: 1px;
+}
+
+p {
+    font-size: 10rem;
+} */
+
+/* rem andra a saltare il parent e prendera direttamente l'elemento root , quindi da p passera a root , quindi fara : 10 x 10 = 100 */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* per quanta riguarda le percentuali , gli elementi saranno sempre il tot% del wrapper(contenitore ) , quindi cambiando 
+la risoluzione cambia la dimensione del wrapper e quindi anche dell'elemento */
+
+div {
+    background-color: salmon;
+    width: 50%;
+}
+
+p {
+    width: 30%;
+    background-color: green;
+}
