@@ -1,0 +1,13 @@
+/* overflow : e la fuoriuscita del contunetu dall'elemento  */
+
+p {
+    height: 200px;
+    width: 200px;
+    border: solid 1px black;
+    overflow-y: scroll;
+    word-break: keep-all;
+}
+
+/* overflow:scroll = ci permette di tenere il contenuto dentro l'elemento e di poterlo scrollare  */
+/* word-break : keep-all = indica quando andare accapo , in questo caso indichiamo di mantenere la parola unita quando si va accapo  */
+/* L'overflow va gestito quando mettimao width e height fisse , altrimenti sara gestito dal css moderno  */
