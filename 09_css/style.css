@@ -1,0 +1,39 @@
+/* dimensione natura delgi elementi : varia per 2 elementi :
+1) elementi con contenuto : che useranno la dimensione naturale degli elemnti al suo interno ad esempio se contengono un 
+immagine 2000 x2000 la mostreranno alla sua dimensione originale  
+2) elementi senza contenuto : da dimensione degli elemnti senza contenuto sara 0  
+
+*/
+
+.box {
+    border: 5px solid darkblue;
+}
+
+.boxPaddingMargin {
+    border: 5px solid darkblue;
+    height: 450px;
+    width: 300px;
+    padding: 10%;
+    margin: 10%;
+}
+
+/* margin e padding con le percentuali : usando le percentuali su margin e su padding fanno riferimento solo alla dimensione orizzontale del parent ,
+ quindi nel calcolare il 10% del parent in questo caso il body faranno il 10% di 960 che e la width del body   */
+
+.box-image {
+    min-width: 200px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* usando width 100% , e min-width e max-width diamo delle dimensione massime e l'elemento nel range del min-width ed entro il max-width sara responsive  */
+
+.box2 {
+    border: 5px solid darkblue;
+    width: 20vw;
+    height: 20vh;
+    font-size: 10vh;
+}
+
+/* 1vw = 1% del viewport width   */
+/* 1vh = 1% del viewport height  */

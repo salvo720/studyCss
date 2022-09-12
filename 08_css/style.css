@@ -56,11 +56,35 @@ p {
 la risoluzione cambia la dimensione del wrapper e quindi anche dell'elemento */
 
 div {
-    background-color: salmon;
+    /* background-color: salmon; */
     width: 50%;
+    opacity: 0.1;
 }
 
 p {
     width: 30%;
     background-color: green;
 }
+
+/* abbiamo 3 modi per poter definire un colore : 
+1) easadecimale : possiamo usare da 0123456789abcdef ( #0f0f0f )
+2) rgb : forma i colori partendo da red green e blue ,  ( red 0-255 , green 0-255 , blue 0-255 )
+3) rgba : uguale ad rbg con aggiunta dell'alphachannel indica la trasparenza/opacita , ( red 0-255 , green 0-255 , blue 0-255 , alpha 0-1 )
+4) hsl : prende 3 parametri ( hue 0-360 , saturation % , lightness % )
+5) hsla : uguale ad hsl ma con l'aggiunta dell'alpha channel ( hue 0-360 , saturation % , lightness % , alpha 0-1 )
+
+*/
+
+/* funzione calc : esegue l'operazione matica e ci ritora la cifra numerica dell'elemento es : calc(20% -100px) */
+
+.pcalc {
+    width: calc(30% - 100px);
+    background-color: lightsalmon;
+}
+
+
+/* position : top,bottom ,right,center , center   */
+
+/* l'attributo content di :after e ::before accetta le stringhe  */
+
+/* gli identifiers sono i colori definiti da css e agganciabili sull'elemeto color attributo  */
