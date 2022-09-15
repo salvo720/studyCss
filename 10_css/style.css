@@ -1,0 +1,46 @@
+.box {
+    height: 200px;
+    width: 200px;
+    border: solid 5px salmon;
+}
+
+.wrapper {
+    /* height: 200px;
+    width: 200px;
+    background-color: salmon; */
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+.contain {
+    object-fit: contain;
+}
+
+/* object fit e ugaule a background-size per le immagini  */
+/* object-fit : e una propieta da applciare quando abbiamo problemi di ratio con le immagini  */
+/* contain : rispetta il ratio dell'immagine , a discapito dell'altezza  */
+/* cover : rispetta il ratio e l'altezza , ma l'immagine andra fuori l'elemento e l'overflo sara di default hidden */
+
+/* replace elementes : dei media , che arrivano fa fuori e css puo modificarne solo la posizione e la dimensione , aspect radio di default */
+
+/* consigli da firefox per evitare problemi tra i borwser con i form , chiamato anche reset del form  */
+/* font-family , prende quello di default del sito , o in alternativa quello del browser  */
+/* padding e margin : resetta i padding e margin con padding : 0 e margin :0  */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    box-sizing: border - box;
+    padding: 0;
+    margin: 0;
+}

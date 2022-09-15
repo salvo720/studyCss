@@ -1,0 +1,59 @@
+/* table-layout: fixed; =  allinea la grandezza delle colenne con il thead  */
+/* border-collapse: collapse; = elimina i doppi bordi tra le celle , fa diventare i bordi delle singole celle un unico bordo come su excel  */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 35%;
+}
+
+thead th:nth-child(4) {
+    width: 15%;
+}
+
+td,
+th {
+    padding: 20px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+/* zebra striping = avere le righe di colori alternati per aumentare la leggibilita  */
+/* odd = dispari  */
+/* even = pari  */
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+caption {
+    padding: 20px;
+    text-align: center;
+}
