@@ -1,0 +1,52 @@
+/* font-color  */
+body{
+    width:50%;
+}
+
+h1 {
+    text-align: center;
+    /* letter-spacing: 20px; */
+    word-spacing: 20px;
+
+}
+
+p{ 
+    color : red;
+    font-family: Arial;
+    font-size: 30px;
+    font-style : italic;
+    /* font-weight:300 ;
+    text-transform:capitalize;
+    text-decoration: line-through;
+    text-shadow: 4px 4px 5px red; */
+    text-align: right;
+    line-height: 20px;
+
+}
+
+/* web safe font = font supportati trasversalmente da tutti i sistema operativi  */
+/* i web safe font sono : Arial,Courier New,Georgia,Times New Roman,Trebuchet MS,Verdana  */
+/* css ha anche i suoi font di default : serif,sans-serif,monospace,cursive,fantasy */
+/* link doc mozzilla : https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals */
+
+/* font stacks : fornire piu tipi di font ci assicura che css riesca ad utilizzarne 1 vanno dallo specifico al piu generico , 
+Cerca sempre di mantenere la stessa family dei font , esempio 
+font-family: "Trebuchet MS" , Verdana , sans-serif */
+
+/* le virgolette si usano sui font quando abbiamo dei font complessi , cioe con piu di una parola  */
+/* font-style : italic;  indica quanto deve essere obliguo il testo  */
+/* font-weight : per scegliere il tipo di grassetto  */
+/* text-transform:capitalize; = applica delle propieta al testo , con capitalizze tutte le lettere ad inizio parola saranno maiuscole  */
+/* text-decoration: line-through; = applica delle decorazione , aggiunge una decorazione al testo line-thought aggiunge una linea che taglia il testo  */
+/* text-shadow: 4px 4px 5px red; = applcia un ombra all'elemento , ha 4 parametri : 
+1)distanza ombra dalla lettera orizzontale px,
+2)distanza ombra dalla lettera verticale px,
+quando sono presenti i primi due parametri l'ombra andra in diagonale 
+3) grado di blure , cioe la sfocatura px
+4) colore dell'ombra 
+ */
+ /* line-height: 20px; = la distanza tra una linea e l'altra  */
+ /* letter-spacing: 20px; = e la distanza tra una lettera e l'altra  */
+ /* word-spacing: 20px; = e la distanza tra una parola e l'altra  */
+
+

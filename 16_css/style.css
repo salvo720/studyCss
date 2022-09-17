@@ -1,0 +1,40 @@
+/* font-color  */
+body{
+    width:50%;
+}
+
+a{
+   
+}
+a:link{
+   
+}
+/* a:link : avra effetto solo a , avra qualcosa dentro l'attributo href    */
+a:visited{
+   
+}
+/* a:visited indica che il link e gia stato visitato e quindi se lo abbiamo visitato cambiera colore  */
+a:focus{
+   
+}
+/* a:focus : avra effetto quando con tab andremo andare il focus sul link  */
+a:hover{
+   
+}
+/* a:hover : quando si ci passa sopra con il mouse  */
+
+a:active{
+   
+}
+/* a:active : quando stiamo cliccando su un link  */
+
+/* 
+gli stati dei link sono 5 e sono :
+1) link 
+2) visited
+3) focus 
+4) hover
+5) active  
+
+gli stati sono pseudoclassi 
+*/

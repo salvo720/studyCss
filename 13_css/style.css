@@ -1,0 +1,75 @@
+/* RULES :  */
+/* 1) Essere costanti ccon le propie regole  */
+/* 2) impsotare un progetto in con una lingua specifica per la nomenclatura e non mischiarle : ad esempio o in italiano o in inglese  */
+/* 3) scegliere una regola da applciare alla nomenclatura ad esempio la lowercamelcase  */
+/* 4) formattazione del codice leggibile  */
+/* 5) commentare il codice  */
+/* 6) creare sezioni logiche : 
+    elementi : body , p ,h1  
+    utilities : .warning{background-color:red;} 
+    componenti di layout per varie pagine : .logo{} , .banner{} , .sidenav{} 
+    specifico : etichetta-prodotto {fontsize:10px}     */
+/* 8) evitare selettori troppo specifici  */
+/* 9) dividere il codice in file piu piccoli : 
+9.1) crea uno stile generale per il sito 
+9.2) se una sezione specifica inizia ad essere grossa ed inusata in altre pagine spostala in un altro file   */
+
+
+
+/* elementi Stile generale   */
+
+body {
+    background-color: greenyellow;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+ul {}
+
+li {}
+
+/* article.main p.box {} = esempio regola troppo specifica  */
+
+
+/* Utilities : classi usate in modo sparso sul sito  */
+
+.error {
+    color: red
+}
+
+.warning {}
+
+.success {}
+
+.info {}
+
+/* Layout  */
+
+.header {}
+
+.navbar {}
+
+
+.main-container {}
+
+.side-nav {}
+
+.footer {}
+
+.banner {}
+
+/* Stile Prodotti  */
+
+.product-container {}
+
+.product-image {}
+
+.product-description {}
+
+.product-description-error {}
