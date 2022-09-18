@@ -4,27 +4,35 @@ body{
 }
 
 a{
-   
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
 }
+
 a:link{
-   
+   color: red;
 }
 /* a:link : avra effetto solo a , avra qualcosa dentro l'attributo href    */
 a:visited{
-   
+   color: green;
 }
 /* a:visited indica che il link e gia stato visitato e quindi se lo abbiamo visitato cambiera colore  */
 a:focus{
-   
+    color: yellow;
+    outline: none;
+    background-color: rgba(95, 93, 93, 0.219);
 }
 /* a:focus : avra effetto quando con tab andremo andare il focus sul link  */
 a:hover{
-   
+    color: violet;
+    background-color: rgba(95, 93, 93, 0.219);
 }
 /* a:hover : quando si ci passa sopra con il mouse  */
 
 a:active{
-   
+    color: teal;
+    background-color: fuchsia;
 }
 /* a:active : quando stiamo cliccando su un link  */
 
@@ -38,3 +46,12 @@ gli stati dei link sono 5 e sono :
 
 gli stati sono pseudoclassi 
 */
+
+ul{
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+
+}

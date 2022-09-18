@@ -1,0 +1,11 @@
+body{
+    /* font-family: Helvetica, "Trebuchet MS", Verdana , sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* importazione manuale font  */
+@font-face{
+    font-family: "BlackParade" ;
+    src : url("font/Black Parade.otf");
+}
