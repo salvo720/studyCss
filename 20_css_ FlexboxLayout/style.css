@@ -1,0 +1,47 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: purple;
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+    flex:200px;
+  }
+
+  /* flex container e flex item :  */
+  section{
+    display:flex;
+    /* flex-direction: row;
+    flex-wrap:wrap; */
+    flex-flow: row wrap; /*  flex-flow e una shortcut , e include come primo attributo flex-direction:row , e come secondo flex-wrap:wrap ;  */
+  }
+
+  /* flex-direction : row ; = flex-direction indica se lavorare su un flex su una riga o su una colonna  */
+  /* flex-wrap:wrap ; indica che quando arriviamo al massimo delle colonne occupabbili per quella riga vai alla prossima , ma se su article non usiamo flex:200px; , 
+    quindi non gli diamo una dimensione non funzionera perche lavorera sulle colonne  */
+
+/* dimensione flex-item : per indicare la dimensione dei flex item ci basta usare l'attributo flex : 1 , che indichera che l'elemento occupera 1 
+    se abbiamo 3 flex item tutti con flex : 1 ; ogni colonna occupera 1/3 dello spazio disponibile ;
+    
+    se abbiamo 3 elemnti di cui 2 con flex : 1 , e 1 con flex : 3 avremmo una proporzione di 5 , quindi lo spazio sara distributo su 5 , quindi le prime due colonne 
+    occuperanno un 1/5 , mentre la terna uccupera 3/5 , totale = 5/5 ( 1/5 + 1/5 + 3/5) ;
+    
+    
+*/
