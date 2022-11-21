@@ -1,0 +1,116 @@
+/*
+ 21) Grid Layout : 
+ 211) - cosa e un Grid Layout 
+ 212) - Definire una Grid : display grid 
+ 213) - Grid flessibili con l'unita fr : grid-tempalte-columns 
+ 214) - Spazio tra le celle : grid-gap 
+ 215) - Repeat 
+ 216) - La funzione minimax() 
+ 217) - Tante colonne quante ce ne stanno 
+ 218) - Posizionare elementi nella grid  
+
+ */
+
+ /*  211) - cosa e un Grid Layout  */
+ /*  212) - Definire una Grid : display grid  */
+
+
+ .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(3,1fr); */
+    /* grid-template-columns: repeat(3, minmax(200px , auto) ); */
+    /* grid-template-columns: repeat(auto-fill, minmax(100px,auto)); */
+    /* grid-template-rows: 100px 200px 500px; */
+    grid-auto-rows: 200px;
+    gap:10px;
+ }
+
+ 
+
+ .box{
+    background-color:lightsalmon;
+ }
+
+
+ /*  213) - Grid flessibili con l'unita fr : grid-tempalte-columns  */
+
+ /*  grid-template-columns : i due punti con  grid-template-columns , sono equivalenti  */
+ 
+ /* 1fr : indica unita di misura flessibile per far occupare alle colonne tutta la pagina  */
+
+  /* grid-template-rows : indica l'altezza della row , ogni valore indica una row  */
+
+ /* grid-auto-rows : lo possiamo usare per usare un valore unitario , o unico per tutte le rows , o in alternativa usiamo auto per averle flesibili  */
+
+ .containerTest3{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+     /* grid-template-rows: 100px 200px 500px; */
+     /* grid-auto-rows: 100px; */
+    gap:10px;
+ }
+
+
+ /*  214) - Spazio tra le celle : grid-gap  */
+
+ /* gap : gap nelle pagine di documentazione viene anchechiamato gutter , tra le colonne , overro la distanza tra una colonne e l'altra  */
+
+ .containerTest2{
+    gap:10px;
+ }
+
+
+ /*  215) - Repeat  */
+
+ .containerTest{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px
+ }
+
+ /* 216) - La funzione minimax()  */
+
+  /* minmax() : primo parametro la larghezza minima , secondo parametro la larghezza massiama per un elemento , l'elemento sara flessibile finche sta dentro il valore 
+ minimo e il massimo , se arriviamo al limite l'elemto non sara piu flesibile   */
+    .div{
+        height: minmax(200px , auto );
+    }
+
+
+ /* 217) - Tante colonne quante ce ne stanno  */
+
+ .containerTest4{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,auto));
+    grid-auto-rows: 200px;
+    gap:10px;
+ }
+
+ /* 218) - Posizionare elementi nella grid   */
+
+ .containerTempalte{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap:10px;
+ }
+
+
+ .box.navbar{
+    grid-column: 1/4;
+ }
+
+ .box.main{
+    grid-column: 1/3;
+ }
+
+ .box.footer{
+    grid-column: 1/4;
+ }
+
+ .box{
+    padding:20px;
+ }
+
