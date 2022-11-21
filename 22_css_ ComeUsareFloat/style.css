@@ -2,7 +2,74 @@
  22) Come Usare Float : (4)
  221) - Elementi Pre-float
  222) - Cosa succede con float 
- 223) - margini su float e eleemnto vicino 
- 224) - pulire elementi vicino a float 
+ 223) - margini su float e elemnto vicino 
+ 224) - pulire elementi vicino dal float 
 
  */
+
+ .box{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding:1em;
+    float:left; 
+    /* margin-right: 15px; */
+ }
+
+ .special{
+    background-color: rgb(79,185,227);
+    padding: 10px;
+    color:#fff;
+ }
+
+
+
+ /* 221) - Elementi Pre-float */
+
+ .box2{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding:1em;
+    /* float:left;  */
+    /* margin-right: 15px; */
+ }
+
+
+ /* 
+ 222) - Cosa succede con float 
+ un elemento a cui viene aggiunto il float passa da occupare 1 singola riga , quindi da dispaly grid ,
+ a occupare 1 riga con un altro elemento , quindi a display : inline 
+ */
+
+ /* 
+ 223) - margini su float e elemnto vicino  
+ un elemento con il float passa a display inline , i margini contano se in quella classe dal bordo dell'elemento (quindi box3 ) che ha il float ,
+ se il margin viene usato su un elemento della row in cui e presente un elemnto con il float , il margin sara relativo alla pagina e non all'elemento con  il float 
+ */
+
+ .box3{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding:1em;
+    float:left; 
+    margin-right: 15px;
+ }
+
+ /* 
+ 224) - pulire elementi vicino dal float 
+ per staccare un elemento dalla row con il float , con l'attributo clear  , che ha 3 valori : 
+ 1) left
+ 2) right 
+ 3) both (sia a destra che a sinistra )
+ dopo aver usato clear:left (il valore left deve corrisponde al valore del flaot , atrimenti la regola non funzionera , altrimenti possiamo usare il valore both ) ,
+  claer : both ; spostera un elemento sulla row sotto , rispetto a quella del float , insieme agli elementi a seguire dal clear  
+   */
+
+.cleared{
+    clear:left;
+}
