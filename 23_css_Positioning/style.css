@@ -1,0 +1,131 @@
+/*
+ 23)  Postitioning : static , fixed , relative , absolute , sticky : (4)
+ 231) - Static ( statico )
+ 232) - Relative ( dalla posizione di partenza  )
+ 233) - Absolute ( rispetto al container )
+ 234) - Definire il contesto 
+ 235) - z-index
+ 236) - Fixed ( rispetto al viewport )
+ 237) - Sticky ( misto tra relative e fixed ) 
+
+ */
+
+/* Positioning : Positioning ci consente di cambiare la posizione di un elemento 
+   quando si usa il tag Positioning e importate usare la width: 100% ; altrimenti l'elemento scomparira 
+*/
+
+body {
+   padding: 50px;
+   height: 2500px;
+}
+
+.box {
+   border-radius: 10px;
+   border: solid 5px salmon;
+   background-color: lightsalmon;
+   height: 100px;
+   margin: 20px;
+}
+
+/* 231) - Static ( statico )
+      position: static; = static indica la posizione di partenza , quindi non cambia nulla su elemento 
+      se su un elemnto static aggiungiamo top:10px ; e left : 50px ; l'elemto non si spostera perche e statico nella posizione di partenza 
+   */
+
+.uno {
+   /* position: static; */
+}
+
+/* 232) - Relative ( dalla posizione di partenza )
+  position: relative; = relative indica la posizione di e relativa reispetto alla posizione di partenza , quindi usando relative possiamo 
+  in aggiunta ad esempio con top:10px ; e left : 50px ; possiamo spostare l'elemento rispetto alla sua posizione di partenza 
+ */
+
+.uno {
+   /* position: relative;
+   top: 50px;
+   left: 50px; */
+}
+
+/* 233) - Absolute ( rispetto al container )
+   position: absolute; = indica una posizione absolute o assoluta , quindi su un nuovo livello , rispetto al suo parent , quindi in questo caso html 
+   (usando absolute e come se l'elemento viene spostato su un nuovo piano , quello davanti rispetto a quello della pagina html)
+ */
+
+.uno {
+   /* position: absolute;
+   top: 50px;
+   left: 50px;
+   width: 100%; */
+}
+
+/* 234) - Definire il contesto 
+   usando la posizione absolute , possiamo andare a modificare il contex , ovvero il contesto in cui si trova l'elemento o il contatiner ,
+    se non ci sono altri elementi con position absolute tra l'elemento e il tag html , il parent sara l'elemento html , 
+    se almento un elemnto con position absolute si trova tra l'elemento e il tag html sara il parent di riferimento , se sono piu di uno , 
+    il parent sara il primo elemento ando a risalire 
+*/
+
+/* 235) - z-index
+   z-index : indica la priorita dell'elemento , quindi sara messo davanti l'elemento con un valore z-index maggiore 
+   z-index funziona solo con position:absolute 
+*/
+
+.unoTest {
+   z-index: 1;
+   background-color: blue;
+}
+
+
+.boxTest {
+   border-radius: 10px;
+   /* border: solid 5px salmon; */
+   /* background-color: lightsalmon; */
+   height: 100px;
+   margin: 20px;
+}
+
+.unoTest,
+.dueTest {
+   position: absolute;
+   width: 88%;
+}
+
+.dueTest {
+   background-color: black;
+}
+
+
+/* 236) - Fixed ( rispetto al viewport ) 
+   positioning:fixed ; = positiong fixed e relativo al viewport , e non al parent , quindi se applichiamo  right : 50px; e rimpiccioliamo il viewport 
+   l'elemento manterra sempre la stessa distanza dalla vieport  
+
+   Nota bene : absolute ( rispetto al container ) , fixed ( rispetto al viewport ) (vieport : ovverro la dimensione di cio che noi vediamo ,
+    o anche detto la grandezza del dispositivo )
+*/
+
+.containerFixed {
+   position: fixed;
+   bottom: 180px;
+}
+
+.treTest {
+   position: fixed;
+   right: 50px;
+   width: 88%;
+   background-color: blueviolet;
+   bottom: 50px;
+}
+
+/* 237) - Sticky ( misto tra relative e fixed )  */
+/* position: sticky; = sticky si comporta come relative (e relative perche funzioneranno quando passera a fixed , anche se top:50px non lo intacca ) 
+ finche l'utente non scrolla oltre l'elemento , e diventa fixed seguendo il tag top:50px , non e absolute ma fixed ( perche la sua posizione rispetto al viewport )
+  Nota bene : fai attenzione agli elementi dentro il div , perche sticky nel momento in cui diventa fixed e limitato all'interno del container 
+  */
+
+.due {
+   position: sticky;
+   top: 50px;
+   width: 88%;
+   background-color: crimson;
+}
