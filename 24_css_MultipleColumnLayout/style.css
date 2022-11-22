@@ -2,5 +2,42 @@
       24) Multiple-column Layout : 
    241) - Esempio di partenza 
    242) - Style della colonna column-gap e column-rule
-   241) - Span delle colonne column-span 
+   243) - Span delle colonne column-span 
  */
+body{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding:30px;
+}
+
+/* 242) - Style della colonna column-gap e column-rule */
+
+/* column-count : 3 ; =  divide gli elementi all'interno del container in 3 colonne .  */
+/* column-width : 100px ; =  divide gli elementi all'interno del container in tante colonne finche possibile di 100px .  */
+/* column-gap: 20px; = indica la distanza tra le colonne  */
+/* column-rule: 5px solid black; = stessa sintassi di border ( quindi 1) dimensione in px , 2) tipo (quindi solid , dott , ecc) , 3) il colore ) 
+e indica il separatore delle colonne   */
+
+
+
+
+ .container {
+  column-count: 3;
+  column-gap: 20px;
+  /* column-width : 100px ;  */
+  column-gap: 20px;
+  /* column-rule: 5px solid black; */
+}
+
+.ads{
+  background-color: lightseagreen;
+  color:white;
+  column-span:all;
+  margin: 20px 0px ;
+  height: 100px;
+}
+
+/* 243) - Span delle colonne column-span 
+  lo span ci permette di prendere piu colonne 
+*/
