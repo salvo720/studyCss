@@ -4,9 +4,115 @@
    252) - Responsive Design e un approccio
    253) - Media query ( mobile e first )
    254) - Flexible grid ( legacy )
-   255) - Tecnologie Moderne : multicolor , flexbox e css grid 
+   255) - Tecnologie Moderne : multicolumn layout , flexbox e css grid 
    256) - Responsive images : max-width vs picture e srcset    
    257) -  Responsive typography : em/rem - vh - rem/em - vw 
    258) -  Viewport meta tag 
 
  */
+
+
+body {
+  background-color: rgb(224, 224, 244);
+}
+
+
+/* p{
+  background-color : white;
+  padding: 20px;
+  width: 1500px;
+ } */
+
+@media screen and(max-width: 1500px) {
+  p {
+    width: auto;
+  }
+}
+
+
+/* .col {
+  float: left;
+  width: 20%;
+  margin: 5px;
+} */
+
+/* 251) - Introduzione Storica : 
+    prima dell'avvento dei telefoni e table si lavorare sui computer ( desktop ) , quindi i siti venivano fatti ad hock per lo schermo di chi sviluppava , 
+    oggi abbiamo dispositivi diversi con grandezze disponibili. Da qui nasce il Resposive design , ovvero il porter fruire lo stesso  sito da piu dispositivi , 
+    questo avviene creando dei layout reattivi , in base alla risoluzione del dispositivo in cui ci troviamo 
+   */
+
+/* 252) - Responsive Design e un approccio : Resposive design e un approccio e non una tecnologia , quindi se sviluppiamo senza questo approccio
+    andreamo a creare un sito vecchio e user-friendly solo per i dispositivi desktop . E importaten usare questo approccio quando costruiamo un sito web , perche 
+    Se questo approccio non viene utilizzato si perdono utenti dei dispositivi mobili 
+    */
+
+/* 253) - Media query ( mobile e first )  : per dichairare una media query dobbiamo mettere @media (max-width: 1500px ) , 
+   questa regola sara attiva finche il dispositvo sara dentro i 1500px */
+
+/* lae media query crea dei breakpoint in cui il coidce css che noi mettiamo cambia  */
+
+@media (max-width: 1500px) {
+  p {
+    width: auto;
+  }
+}
+
+/* 254) - Flexible grid ( legacy ) : le flexible grid sono dei precss grid , e ci permettono di dividere la pagina in colonne responsive ,
+    non e consigliato usarle ma sono meglio di nulla , per usarli diamo alla width un valore percentuale , e flaot left o right , esempio : 
+    float: left; width: 20%; 
+    i flexible grid non funzionerranno se non usiamo il float 
+    i flexible grid possono essere combinati con le media query 
+
+    Nota Bene : usare i flexible grid e le media query , possiamo ottenere quache bug nel layout , ad esempio dalla grandezza 501px alla 527px
+    il layout non viene visualizzatto correttamente per questo nascono le tecnologie moderne ( multicolum layout , flexbox e css grid )
+   */
+
+/* .col {
+  float: left;
+  width: 20%;
+  margin: 5px;
+}
+
+@media (max-width: 500px) {
+  .col {
+    width: auto;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  .col {
+    width: 40%;
+  }
+} */
+
+p {
+  background-color: white;
+  padding: 20px;
+  column-count: 3;
+}
+
+/* 255) - Tecnologie Moderne : multicolumn layout , flexbox e css grid   : multicol o multicolumn e il piu vecchio ed e preferibile usare flexbox e css grid 
+   
+   */
+
+/* p {
+  background-color: white;
+  padding: 20px;
+  display: grid;
+} */
+
+/* 256) - Responsive images : max-width vs picture e srcset  : max-width con le immagini puo essere usato come soluzione per il responsive , ma 
+e una brutta soluzione perche non ottimizza le immagini ed ad esempio su un telefono andremo a scaricare un immagine che non andremo mai a vedere , 
+perche sara ridimensionata e dovendo gestire al meglio le risorse , potrebbe impiegare un po per caricare , per questo e meglio usare soluzioni moderne
+come picture e srcset .
+questo indice anche nel ranking di google 
+*/
+
+img {
+  max-width: 100%;
+}
+
+/* TODO: andare a vedere la parte di picture e srcset sul corso di html5 */
+
+/* 257) -  Responsive typography : em/rem - vh - rem/em - vw  */
