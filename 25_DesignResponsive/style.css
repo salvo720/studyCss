@@ -86,11 +86,11 @@ body {
   }
 } */
 
-p {
+/* p {
   background-color: white;
   padding: 20px;
   column-count: 3;
-}
+} */
 
 /* 255) - Tecnologie Moderne : multicolumn layout , flexbox e css grid   : multicol o multicolumn e il piu vecchio ed e preferibile usare flexbox e css grid 
    
@@ -109,10 +109,35 @@ come picture e srcset .
 questo indice anche nel ranking di google 
 */
 
-img {
+/* img {
   max-width: 100%;
-}
+} */
 
 /* TODO: andare a vedere la parte di picture e srcset sul corso di html5 */
 
-/* 257) -  Responsive typography : em/rem - vh - rem/em - vw  */
+/* 257) -  Responsive typography : em/rem - vh - rem/em - vw : 
+usando su un elemento come tipografia (grandezza dei caratteri ) gli elemnti vw , ( ovvero viewport ) , i caratteri saranno abbastanza 
+grandi da poterli leggere da desktop , ma troppo piccoli per mobile e tablet , la soluzione e usare la funzione calc( 1em + 0.5vw );
+ 1em e la dimensione minima per la tipografia e il 0.5vw  viene aggiunto 
+ */
+
+p {
+  background-color: white;
+  padding: 20px;
+  font-size: 1.8vw;
+  font-size:  calc( 1em + 0.5vw );
+}
+
+/* 258) -  Viewport meta tag  :  concetriamoci su questo tag html ( <meta name="viewport" content="width=device-width, initial-scale=1.0"> ) ,
+ questo tag indica che il content deve essere della stessa grandezza del device e quindi dello schermo , questo perche con i primi 
+ smartphone c'era un problema di larghezza , ovverro la grandezza dello schermo era di 400px e il browser ne segnava 900px  , dando rpoblemi ai siti 
+ che non erano ben strutturati , perche percepivano una grandezza diversa rispetto a quella reale del dispositivo , questo tag nasce per risovere questo problema
+ prende la device-width e la impsota come width e il codice  initial-scale=1.0 indica che  la scalatura e a 1.0 , quindi la scalutira e quella di default , ma 
+ la grandezza del sito e quella del dispositivo , possiamo dargli anche altri 3 paramteri opzionali : 
+ 1)initial-scale : imposta lo zoom iniziale della pagina , di default a 1 
+ 2)height : imposta un altezza specifica per il viewport 
+ 3)minium-scale : imposta lo zoom minimo della pagina 
+ 4)maximum-scale : imposta lo zoom massimo della pagina
+ 5) user-scalable : previene lo zoom se impostato su no 
+
+*/
