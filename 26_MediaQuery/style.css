@@ -11,7 +11,7 @@
    269) - Servono veramente le media query ? 
  */
 
- /* 261) - Tipi di Media Query : all , print , screen , speech : 
+/* 261) - Tipi di Media Query : all , print , screen , speech : 
   Le media query ci consento di cambiare delle regole css in base a dei parametri che noi diamo .
   Abbiamo 4 tipi di media query e sono : 
   1) all : per tutte le casistiche
@@ -21,22 +21,22 @@
   
   */
 
- body {
+body {
   background-color: rgb(224, 224, 244);
 }
 
-p{
-  background-color : white;
+p {
+  background-color: white;
   padding: 20px;
   width: auto;
- }
+}
 
- /* 262) - Width ed Height : Dentro le parentesi di una media query possiamo indicare l'altezza e la width massima 
+/* 262) - Width ed Height : Dentro le parentesi di una media query possiamo indicare l'altezza e la width massima 
  per la nostra media query , 
    */
 
- @media screen and (max-width: 600px ) , 
- (max-height : 600px ) {
+@media screen and (max-width: 600px),
+(max-height : 600px) {
   body {
     background-color: rgb(15, 15, 223);
   }
@@ -81,3 +81,30 @@ p{
     background-color: rgb(226, 145, 39);
   }
 }  */
+
+
+/* 265) - Logica AND : and e indicato dalla parola and  , entrambe le condizione vere per eseguire la regola css */
+
+/* @media (max-width: 1200px) and (orientation: landscape) {
+  body {
+    background-color: rgb(15, 15, 223);
+  }
+} */
+
+
+/* 266) - Logica OR : or e indicato dalla virgola , o una o l'altra condizione per eseguire la regola css */
+
+/* @media (max-width: 500px) ,  (orientation: landscape) {
+  body {
+    background-color: rgb(15, 15, 223);
+  }
+}  */
+
+
+/*  267) - Logica NOT : not e indicato dalla parola not , e andra a negare la condizione   */
+
+ @media not screen {
+  body {
+    color: rgb(15, 15, 223);
+  }
+}  
