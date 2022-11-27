@@ -108,3 +108,24 @@ p {
     color: rgb(15, 15, 223);
   }
 }  
+
+/* 268) - Come scegliere i breakpoint : per scegliere i breakpoint google most used device resolution  ,
+ vedi per mobile , prendi il minimo e usalo come min-width  , fino a poco meno del minimo per i table come max-width , e cosi via .... 
+  esempio : 
+
+  telefono : 
+ @media screen  (min-width : 360px ) and ( max-width:600px)
+
+ tablet : 
+  @media screen  (min-width : 601px ) and ( max-width:1023px)
+
+   desktop : 
+  @media screen  (min-width : 1024px ) 
+
+*/
+
+/* 269) - Servono veramente le media query ? : 
+possiamo usare le media query per rendere responsive un sito , anche se non sono necessario , perche e possibile rendere un sito responsive 
+utilizzando le propeta flexbox e grid css , ma sono ancora altamente utilizzate e possiamo usarle se non utilizziamo flexbox e grid ,
+ ad esempio per fare cose specifiche , come cabiare il layout per telefono e usarne uno divcerso 
+*/
