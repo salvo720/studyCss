@@ -7,3 +7,44 @@
   1) multicol 
   2) media query e in base alle risoluzione scendere da tre elemnti a 2 e poi a 1 
  */
+
+ .tamplateMasonry{
+        margin: auto;
+        width: 75%;
+        /* border: 3px solid green; */
+        padding: 10px;
+ }
+
+ .row{
+    /* display: inline-flex; */
+    column-gap: 10px;
+    column-rule: 10px;
+    column-width: 300px 300px 300px;
+    column-count: 3;
+ }
+
+ /* Desktop */
+ @media screen and (min-width:1280px) {
+    /* e quello di default  */
+ }
+
+/* tablet */
+ @media (min-width:768px) and (max-width:1279px) {
+    .tamplateMasonry{
+        margin: auto;
+        width: 80%;
+        /* border: 3px solid green; */
+        padding: 10px;
+ }
+ 
+     .row{
+        column-count: 2;
+     }
+ }
+
+ /* telefono o mobile */
+ @media screen and (max-width:767px) {
+     .row{
+        column-count: 1;
+     }
+ }
